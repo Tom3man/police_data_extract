@@ -13,6 +13,9 @@ bs4 = "^0.0.1"
 pandas = "^2.1.4"
 html5lib = "^1.1"
 orb = {git = "https://github.com/Tom3man/orb-weaver.git"}
+google = "^3.0.0"
+google-cloud = "^0.34.0"
+google-cloud-storage = "^2.19.0"
 
 
 [tool.poetry.group.dev.dependencies]

@@ -95,13 +95,15 @@ def rename_latest_file(download_dir: str, new_name: str, timeout: Optional[int] 
         time.sleep(1)  # Poll every second
 
 
-def clean_and_reorganise_data(source_folder: str, output_folder: str):
+def clean_and_reorganise_data(source_folder: str, output_folder: str) -> None:
     """
     Cleans, reorganises, and deletes old police data from the source folder
-    after processing to the output folder.
+    after processing to the output folder. Data is organized by region/year,
+    with files named as the month (e.g., 07.csv, 08.csv).
 
     Args:
-        parent_folder (str): Path to the parent folder containing extracted and output data directories.
+        source_folder (str): Path to the source folder containing raw data (year-month structure).
+        output_folder (str): Path to the output folder where cleaned data will be saved.
 
     Returns:
         None
@@ -114,28 +116,42 @@ def clean_and_reorganise_data(source_folder: str, output_folder: str):
         if os.path.isdir(os.path.join(source_folder, folder))
     ]
 
+    log.info(f"Found {len(year_month_folders)} year-month folders to process.")
+
     # Process each year-month folder
     for year_month_folder in year_month_folders:
         year_month = os.path.basename(year_month_folder)
+        log.info(f"Processing folder: {year_month_folder}")
+
+        # Extract year and month from the folder name (e.g., '2022-07')
+        try:
+            year, month = year_month.split("-")
+        except ValueError as e:
+            log.error(f"Invalid folder name format: {year_month}. Expected 'YYYY-MM'. Error: {e}")
+            continue
 
         # Iterate over all files in the year-month folder
         for region_file in os.listdir(year_month_folder):
             original_path = os.path.join(year_month_folder, region_file)
 
             # Extract region name by cleaning the file name
-            region = (
-                region_file
-                .replace(f"{year_month}-", "")
-                .replace("-street", "")
-                .replace(".csv", "")
-            )
+            try:
+                region = (
+                    region_file
+                    .replace(f"{year_month}-", "")
+                    .replace("-street", "")
+                    .replace(".csv", "")
+                )
+            except Exception as e:
+                log.error(f"Error extracting region name from {region_file}: {e}")
+                continue
 
-            # Create the region folder in the output directory
-            new_region_folder = os.path.join(output_folder, region)
+            # Create the region/year folder in the output directory
+            new_region_folder = os.path.join(output_folder, region, year)
             os.makedirs(new_region_folder, exist_ok=True)
 
-            # Define the new file path
-            new_region_file = os.path.join(new_region_folder, f"{year_month}.csv")
+            # Define the new file path (rename to month.csv)
+            new_region_file = os.path.join(new_region_folder, f"{month}.csv")
 
             # Read, clean, save, and delete the processed file
             try:
@@ -143,8 +159,10 @@ def clean_and_reorganise_data(source_folder: str, output_folder: str):
                 df = pd.read_csv(original_path)
                 df.columns = [col.replace(" ", "_").lower() for col in df.columns]
 
+                # Add a load date column for tracking
                 df['load_date'] = datetime.today().strftime('%Y-%m-%d')
 
+                # Save the cleaned data
                 df.to_csv(new_region_file, index=False)
 
                 log.info(f"Processed and saved: {new_region_file}")
