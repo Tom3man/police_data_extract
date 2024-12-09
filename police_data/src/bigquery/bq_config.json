@@ -1,0 +1,5 @@
+{
+    "dataset_id": "police_data",
+    "staging_table_id": "staging_table",
+    "production_table_id": "street_crime"
+}

@@ -10,10 +10,11 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.remote.webdriver import WebDriver
 from selenium.webdriver.support.ui import Select
 
-from police_data import DATA_PATH, REPO_PATH
-from police_data.utils.utils import (clean_and_reorganise_data,
-                                     extract_and_cleanup_zip,
-                                     extract_json_file, rename_latest_file)
+from police_data import DATA_PATH, MODULE_PATH
+from police_data.src.extract.common import (clean_and_reorganise_data,
+                                            extract_and_cleanup_zip,
+                                            extract_json_file,
+                                            rename_latest_file)
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 log = logging.getLogger(__name__)
@@ -206,7 +207,7 @@ if __name__ == "__main__":
 
     # Extract start/end dates and force IDs from the JSON configuration file
     json_info = extract_json_file(
-        json_file_path=f'{REPO_PATH}/config.json'
+        json_file_path=f'{MODULE_PATH}/src/extract/extract.json'
     )
 
     if json_info:

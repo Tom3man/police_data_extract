@@ -1,0 +1,67 @@
+[
+    {
+        "name": "crime_id",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "month",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "reported_by",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "falls_within",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "longitude",
+        "type": "FLOAT",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "latitude",
+        "type": "FLOAT",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "location",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "lsoa_code",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "lsoa_name",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "crime_type",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "last_outcome_category",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "context",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "load_date",
+        "type": "DATE",
+        "mode": "NULLABLE"
+    }
+]

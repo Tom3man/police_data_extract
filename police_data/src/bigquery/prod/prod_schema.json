@@ -1,0 +1,56 @@
+[
+    {
+        "name": "crime_id",
+        "type": "STRING",
+        "mode": "REQUIRED",
+        "description": "Unique ID for the crime"
+    },
+    {
+        "name": "month_year",
+        "type": "DATE",
+        "mode": "REQUIRED",
+        "description": "MM-YYYY for the event"
+    },
+    {
+        "name": "police_force",
+        "type": "STRING",
+        "mode": "REQUIRED",
+        "description": "Police force area the event has occurred in, corresponding to the 'falls_within' raw column"
+    },
+    {
+        "name": "longitude",
+        "type": "FLOAT",
+        "mode": "REQUIRED",
+        "description": "Longitude coordinate"
+    },
+    {
+        "name": "latitude",
+        "type": "FLOAT",
+        "mode": "REQUIRED",
+        "description": "Latitude coordinate"
+    },
+    {
+        "name": "lsoa_code",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "description": "Lower layer Super Output Areas (LSOAs)"
+    },
+    {
+        "name": "crime_type",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "description": "Type of crime"
+    },
+    {
+        "name": "location_description",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "description": "Free text description of the location"
+    },
+    {
+        "name": "geo_point",
+        "type": "GEOGRAPHY",
+        "mode": "REQUIRED",
+        "description": "Computed point combining lat/lng"
+    }
+]
