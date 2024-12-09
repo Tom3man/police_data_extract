@@ -1,0 +1,233 @@
+{
+    "dates": {
+        "start_date": "2022-07",
+        "end_date": "2022-09"
+    },
+    "forces": [
+        {
+            "name": "Avon and Somerset Constabulary",
+            "id": "id_forces_0",
+            "active": true
+        },
+        {
+            "name": "Bedfordshire Police",
+            "id": "id_forces_1",
+            "active": true
+        },
+        {
+            "name": "British Transport Police",
+            "id": "id_forces_2",
+            "active": false
+        },
+        {
+            "name": "Cambridgeshire Constabulary",
+            "id": "id_forces_3",
+            "active": false
+        },
+        {
+            "name": "Cheshire Constabulary",
+            "id": "id_forces_4",
+            "active": false
+        },
+        {
+            "name": "City of London Police",
+            "id": "id_forces_5",
+            "active": false
+        },
+        {
+            "name": "Cleveland Police",
+            "id": "id_forces_6",
+            "active": false
+        },
+        {
+            "name": "Cumbria Constabulary",
+            "id": "id_forces_7",
+            "active": false
+        },
+        {
+            "name": "Derbyshire Constabulary",
+            "id": "id_forces_8",
+            "active": false
+        },
+        {
+            "name": "Devon & Cornwall Police",
+            "id": "id_forces_9",
+            "active": false
+        },
+        {
+            "name": "Dorset Police",
+            "id": "id_forces_10",
+            "active": false
+        },
+        {
+            "name": "Durham Constabulary",
+            "id": "id_forces_11",
+            "active": false
+        },
+        {
+            "name": "Dyfed-Powys Police",
+            "id": "id_forces_12",
+            "active": false
+        },
+        {
+            "name": "Essex Police",
+            "id": "id_forces_13",
+            "active": false
+        },
+        {
+            "name": "Gloucestershire Constabulary",
+            "id": "id_forces_14",
+            "active": false
+        },
+        {
+            "name": "Greater Manchester Police",
+            "id": "id_forces_15",
+            "active": false
+        },
+        {
+            "name": "Gwent Police",
+            "id": "id_forces_16",
+            "active": false
+        },
+        {
+            "name": "Hampshire Constabulary",
+            "id": "id_forces_17",
+            "active": false
+        },
+        {
+            "name": "Hertfordshire Constabulary",
+            "id": "id_forces_18",
+            "active": false
+        },
+        {
+            "name": "Humberside Police",
+            "id": "id_forces_19",
+            "active": false
+        },
+        {
+            "name": "Kent Police",
+            "id": "id_forces_20",
+            "active": false
+        },
+        {
+            "name": "Lancashire Constabulary",
+            "id": "id_forces_21",
+            "active": false
+        },
+        {
+            "name": "Leicestershire Police",
+            "id": "id_forces_22",
+            "active": false
+        },
+        {
+            "name": "Lincolnshire Police",
+            "id": "id_forces_23",
+            "active": false
+        },
+        {
+            "name": "Merseyside Police",
+            "id": "id_forces_24",
+            "active": false
+        },
+        {
+            "name": "Metropolitan Police Service",
+            "id": "id_forces_25",
+            "active": false
+        },
+        {
+            "name": "Norfolk Constabulary",
+            "id": "id_forces_26",
+            "active": false
+        },
+        {
+            "name": "North Wales Police",
+            "id": "id_forces_27",
+            "active": false
+        },
+        {
+            "name": "North Yorkshire Police",
+            "id": "id_forces_28",
+            "active": false
+        },
+        {
+            "name": "Northamptonshire Police",
+            "id": "id_forces_29",
+            "active": false
+        },
+        {
+            "name": "Northumbria Police",
+            "id": "id_forces_30",
+            "active": false
+        },
+        {
+            "name": "Nottinghamshire Police",
+            "id": "id_forces_31",
+            "active": false
+        },
+        {
+            "name": "Police Service of Northern Ireland",
+            "id": "id_forces_32",
+            "active": false
+        },
+        {
+            "name": "South Wales Police",
+            "id": "id_forces_33",
+            "active": false
+        },
+        {
+            "name": "South Yorkshire Police",
+            "id": "id_forces_34",
+            "active": false
+        },
+        {
+            "name": "Staffordshire Police",
+            "id": "id_forces_35",
+            "active": false
+        },
+        {
+            "name": "Suffolk Constabulary",
+            "id": "id_forces_36",
+            "active": false
+        },
+        {
+            "name": "Surrey Police",
+            "id": "id_forces_37",
+            "active": false
+        },
+        {
+            "name": "Sussex Police",
+            "id": "id_forces_38",
+            "active": false
+        },
+        {
+            "name": "Thames Valley Police",
+            "id": "id_forces_39",
+            "active": false
+        },
+        {
+            "name": "Warwickshire Police",
+            "id": "id_forces_40",
+            "active": false
+        },
+        {
+            "name": "West Mercia Police",
+            "id": "id_forces_41",
+            "active": false
+        },
+        {
+            "name": "West Midlands Police",
+            "id": "id_forces_42",
+            "active": false
+        },
+        {
+            "name": "West Yorkshire Police",
+            "id": "id_forces_43",
+            "active": false
+        },
+        {
+            "name": "Wiltshire Police",
+            "id": "id_forces_44",
+            "active": false
+        }
+    ]
+}

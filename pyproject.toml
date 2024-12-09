@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "police-data"
+version = "1.0.0"
+description = "Repository for extracting policing data"
+authors = ["Tom <tomrfreeman3@gmail.com>"]
+packages = [{include = "police_data"}]
+
+[tool.poetry.dependencies]
+python = ">=3.12,<3.13"
+selenium = "^4.16.0"
+webdriver-manager = "^4.0.1"
+bs4 = "^0.0.1"
+pandas = "^2.1.4"
+html5lib = "^1.1"
+orb = {git = "https://github.com/Tom3man/orb-weaver.git"}
+
+
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^6.28.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
