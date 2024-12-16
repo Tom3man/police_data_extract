@@ -3,12 +3,12 @@ import logging
 import os
 import time
 import zipfile
-from datetime import datetime
 from typing import List, Optional, Tuple, Union
 
 import pandas as pd
 
 from police_data import DATA_PATH
+from police_data.src.extract.common.transformations import format_dataframe
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 log = logging.getLogger(__name__)
@@ -157,10 +157,8 @@ def clean_and_reorganise_data(source_folder: str, output_folder: str) -> None:
             try:
                 # Read and process the data
                 df = pd.read_csv(original_path)
-                df.columns = [col.replace(" ", "_").lower() for col in df.columns]
 
-                # Add a load date column for tracking
-                df['load_date'] = datetime.today().strftime('%Y-%m-%d')
+                df = format_dataframe(df=df)
 
                 # Save the cleaned data
                 df.to_csv(new_region_file, index=False)

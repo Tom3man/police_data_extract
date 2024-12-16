@@ -202,6 +202,7 @@ class PoliceDataDownloader:
 
 
 if __name__ == "__main__":
+
     # Define the paths for raw data and configuration
     data_path = f"{DATA_PATH}/police_data_raw"
 
@@ -220,7 +221,7 @@ if __name__ == "__main__":
         log.error("Failed to extract data.")
         exit(1)  # Exit the program since the required data is missing
 
-    # Initialize the PoliceDataDownloader with the raw data path
+    # Initialise the PoliceDataDownloader with the raw data path
     street_data_downloader = PoliceDataDownloader(data_path=data_path)
 
     try:
