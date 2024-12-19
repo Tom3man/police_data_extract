@@ -245,7 +245,7 @@ if __name__ == "__main__":
         street_data_downloader.generate_file(driver=web_driver)
 
         # Download the generated file to the local machine
-        street_data_downloader.download_to_local(driver=web_driver)
+        street_data_downloader.download_to_local(driver=web_driver, download_timeout=600)
 
         log.info("Download process completed successfully.")
     except Exception as e:

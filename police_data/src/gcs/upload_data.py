@@ -37,7 +37,7 @@ def upload_file_to_gcs(
     # Construct the GCS path
     gcs_path = os.path.join(region, f"year={year}", f"month={month}", f"{month}.csv").replace("\\", "/")
 
-    # Initialize GCS client and bucket
+    # Initialie GCS client and bucket
     client = storage.Client()
     bucket = client.bucket(bucket_name)
     blob = bucket.blob(gcs_path)
